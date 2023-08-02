@@ -196,15 +196,15 @@ public abstract class AbstractConnectorSettings implements IConnectorSettings {
     }
 
     protected IEditorGui sideGui(IEditorGui gui) {
-        return gui.choices(TAG_FACING, "Side from which to operate", facingOverride == null ? side : facingOverride, OrientationTools.DIRECTION_VALUES);
+        return gui.choices(TAG_FACING, "要执行的方块的面", facingOverride == null ? side : facingOverride, OrientationTools.DIRECTION_VALUES);
     }
 
     protected IEditorGui colorsGui(IEditorGui gui) {
         return gui
-                .colors(TAG_COLOR + "0", "Enable on color", colors[0].getColor(), Color.COLORS)
-                .colors(TAG_COLOR + "1", "Enable on color", colors[1].getColor(), Color.COLORS)
-                .colors(TAG_COLOR + "2", "Enable on color", colors[2].getColor(), Color.COLORS)
-                .colors(TAG_COLOR + "3", "Enable on color", colors[3].getColor(), Color.COLORS);
+                .colors(TAG_COLOR + "0", "在颜色上启用(配合逻辑频道侦测模式)", colors[0].getColor(), Color.COLORS)
+                .colors(TAG_COLOR + "1", "在颜色上启用(配合逻辑频道侦测模式)", colors[1].getColor(), Color.COLORS)
+                .colors(TAG_COLOR + "2", "在颜色上启用(配合逻辑频道侦测模式)", colors[2].getColor(), Color.COLORS)
+                .colors(TAG_COLOR + "3", "在颜色上启用(配合逻辑频道侦测模式)", colors[3].getColor(), Color.COLORS);
     }
 
     protected IEditorGui redstoneGui(IEditorGui gui) {
